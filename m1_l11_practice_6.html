@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng của 30 số chia hết cho 7 đầu tiên trong các số</title>
+</head>
+<body>
+
+<script>
+
+
+    let count = 1;
+    let number = 30 ;
+    let a = 0;
+    let result = 0;
+    while (count <= number) {
+        if (a % 7 == 0) {
+            result += a;
+            count++;
+        }
+        a++;
+    }
+    document.write(result);
+</script>
+
+</body>
+</html>

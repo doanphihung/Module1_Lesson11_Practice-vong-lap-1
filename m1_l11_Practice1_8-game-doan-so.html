@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button type="submit" id="play">Chơi</button>
+
+<script>
+    document.getElementById('play').addEventListener('click', play);
+    function play() {
+        let a = parseInt(prompt('Nút dưới '));
+        let b = parseInt(prompt('Nút trên '));
+        let random = getRnd(a, b);
+        let ngDungNhap = 0;   // Phải khai báo let ngDungNhap bên ngoài do-while, còn ko thì phải khai báo var trong do while.
+
+        function getRnd(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        do {
+            ngDungNhap = parseInt(prompt('Số dự đoán'));
+            if (ngDungNhap > random) {
+                alert('lớn hơn');
+            } else if (ngDungNhap < random) {
+                alert('nhỏ hơn') ;
+            } else {
+                alert('you won');
+            }
+
+        } while (ngDungNhap != random);
+
+    }
+
+</script>
+
+</body>
+</html>

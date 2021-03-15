@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien thi 20 so fibonacci</title>
+</head>
+<body>
+
+<!-- Bài 4-->
+<p id="result4"></p>
+<p id="result5"></p>
+
+
+
+
+
+<script>
+
+    // Bài  3
+   function fibonacci(num) {
+       if (num <= 1) return 1;
+       return  fibonacci(num - 1) + fibonacci(num - 2);
+   }
+   let result3 ='';
+   for (let a = 0; a <= 20; a++) {
+       result3 += fibonacci(a) + ' ';
+   }
+   document.write(result3);
+
+   // Bài 4
+   for (let a = 0 ; a <= 20; a++ ) {
+       if (fibonacci(a) % 5 == 0) {
+           document.getElementById('result4').innerHTML = fibonacci(a);
+          break;
+       }
+   }
+
+   // Bài 5
+    let result5 = 0;
+    for (let a = 0 ; a <= 20; a++) {
+        result5 += fibonacci(a) ;
+        document.getElementById('result5').innerHTML = result5;
+    }
+
+
+
+
+</script>
+
+</body>
+</html>
